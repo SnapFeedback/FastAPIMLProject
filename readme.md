@@ -78,41 +78,42 @@ You can use the following Python script to test the API. Make sure to replace th
     ```bash
         python test.py
 - JavaScript local test sample can be as below
-    ```javascript
-    const axios = require('axios');
+       
+- ```javascript
+        const axios = require('axios');
 
-    // Function to test the API endpoint
-    async function testAPI() {
-        try {
-            // Replace with your API endpoint URL
-            const apiUrl = 'http://127.0.0.1:8000/predict';
+        // Function to test the API endpoint
+        async function testAPI() {
+            try {
+                // Replace with your API endpoint URL
+                const apiUrl = 'http://127.0.0.1:8000/predict';
     
-            // Example base64 encoded image data (replace with your actual image data)
-            const imageData = 'base64_encoded_image_data_here';
+                // Example base64 encoded image data (replace with your actual image data)
+                const imageData = 'base64_encoded_image_data_here';
     
-            // Example payload with image data
-            const payload = {
-                image_data: imageData
-            };
+                // Example payload with image data
+                const payload = {
+                    image_data: imageData
+                };
     
-            // Make a POST request to the API endpoint
-            const response = await axios.post(apiUrl, payload, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            });
+                // Make a POST request to the API endpoint
+                const response = await axios.post(apiUrl, payload, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
     
-            // Log the response from the API
-            console.log('API Response:', response.data);
-        } catch (error) {
-            // Log any errors that occur during the request
-            console.error('Error:', error.message);
-        }
-        }
+                // Log the response from the API
+                console.log('API Response:', response.data);
+            } catch (error) {
+                // Log any errors that occur during the request
+                console.error('Error:', error.message);
+            }
+            }
     
-    // Call the function to test the API
-    testAPI();
+        // Call the function to test the API
+        testAPI();
 
 ## 2. Running the API Locally
 - **Clone the Repository**:
