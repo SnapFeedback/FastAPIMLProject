@@ -77,6 +77,43 @@ You can use the following Python script to test the API. Make sure to replace th
 - Above test code can be found in the test.py, test can be done once the server is deploy in dev and using the commang
     ```bash
         python test.py
+- JavaScript local test sample can be as below
+    ```javascript
+    const axios = require('axios');
+
+    // Function to test the API endpoint
+    async function testAPI() {
+        try {
+            // Replace with your API endpoint URL
+            const apiUrl = 'http://127.0.0.1:8000/predict';
+    
+            // Example base64 encoded image data (replace with your actual image data)
+            const imageData = 'base64_encoded_image_data_here';
+    
+            // Example payload with image data
+            const payload = {
+                image_data: imageData
+            };
+    
+            // Make a POST request to the API endpoint
+            const response = await axios.post(apiUrl, payload, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            });
+    
+            // Log the response from the API
+            console.log('API Response:', response.data);
+        } catch (error) {
+            // Log any errors that occur during the request
+            console.error('Error:', error.message);
+        }
+        }
+    
+    // Call the function to test the API
+    testAPI();
+
 ## 2. Running the API Locally
 - **Clone the Repository**:
 
@@ -99,10 +136,10 @@ You can use the following Python script to test the API. Make sure to replace th
 
 - **Production Deployment**
 For production deployment, it's recommended to use a production-ready server like Gunicorn with Uvicorn workers or using .
-resource for deployment
+  - Resource for deployment
 
-- https://www.youtube.com/watch?v=SgSnz7kW-Ko
-- https://fastapi.tiangolo.com/deployment/
+    - https://www.youtube.com/watch?v=SgSnz7kW-Ko
+    - https://fastapi.tiangolo.com/deployment/
 
 ## 4. Remarks
 - current version of application is developed and tested with anacoda3 env on MacOS Sonona 14.5 
