@@ -9,7 +9,7 @@ import base64
 app = FastAPI()
 
 # Load the pre-trained model
-parallel_model = tf.keras.models.load_model('models/parallel_model.h5')
+parallel_model = tf.keras.models.load_model('models/parallel_model.h5',compile=False)
 detector = dlib.get_frontal_face_detector()
 
 
