@@ -22,24 +22,27 @@ def read_root():
     return {"message": "Welcome to the SnapFeedBack Emotion Detection API"}
 
 
-@app.get("/hello/{name}")
-def read_hello(name: str):
-    return {"message": f"Hello, {name}"}
-
-
+@app.post("/predict")
 @app.post("/predict")
 def predict_emotion(image: ImageData):
+    results = []
+
     # Decode the base64 image
-    img_data = base64.b64decode(image.image_data)
-    nparr = np.frombuffer(img_data, np.uint8)
-    img = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)
+    try:
+        img_data = base64.b64decode(image.image_data)
+        nparr = np.frombuffer(img_data, np.uint8)
+        img = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)
+        if img is None:
+            raise ValueError("Decoded image is None")
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid image data: {str(e)}")
 
     # Detect faces
     faces = detector(img)
     if len(faces) == 0:
         return {"detail": "No face detected"}
 
-    roi = []
+    rois = []
     for face in faces:
         x1 = face.left()
         y1 = face.top()
@@ -51,28 +54,23 @@ def predict_emotion(image: ImageData):
             continue
 
         face_roi = cv2.resize(img[y1:y2, x1:x2], (48, 48))
-        roi.append(face_roi)
+        rois.append(face_roi)
 
-    if len(roi) == 0:
+    if len(rois) == 0:
         return {"detail": "No valid face found"}
 
-    roi = np.array(roi).reshape(-1, 48, 48, 1)
+    for roi in rois:
+        roi = np.array(roi).reshape(-1, 48, 48, 1)
 
-    # Make predictions
-    predictions = parallel_model.predict(roi)
+        # Make predictions
+        predictions = parallel_model.predict(roi)
 
-    results = {
-        "boredom": round(predictions[0][1], 3),
-        "engagement": round(predictions[1][1], 3),
-        "confusion": round(predictions[2][1], 3),
-        "frustration": round(predictions[3][1], 3)
-    }
+        result = {
+            "boredom": f"{round(float(predictions[0][0][1]), 3)}",
+            "engagement": f"{round(float(predictions[1][0][1]), 3)}",
+            "confusion": f"{round(float(predictions[2][0][1]), 3)}",
+            "frustration": f"{round(float(predictions[3][0][1]), 3)}"
+        }
+        results.append(result)
 
     return results
-
-
-# Code to run the app
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host='0.0.0.0', port=8000, debug=True)
