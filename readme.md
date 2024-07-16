@@ -126,7 +126,9 @@ You can use the following Python script to test the API. Make sure to replace th
 - **Create a Conda Environment**:
     ```bash
         conda env create -f environment.yml
-        conda activate emotion-detection-env
+        conda activate fastapi-ml-project
+- **Alternative Select Interpreter using Anaconda**
+
 - **Start the API in development mode**:
 
     ```bash
