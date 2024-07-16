@@ -116,6 +116,9 @@ You can use the following Python script to test the API. Make sure to replace th
         testAPI();
 
 ## 2. Running the API Locally
+- **Download and Install Anaconda**
+    - Installer: https://www.anaconda.com/download/success
+    - Command line in linux os: https://docs.anaconda.com/anaconda/install/linux/
 - **Clone the Repository**:
 
     ```bash
