@@ -61,10 +61,10 @@ dependencies:
   - bzip2=1.0.8=h620ffc9_4
   - c-ares=1.19.0=h80987f9_0
   - c-blosc2=2.8.0=h313beb8_0
-  - ca-certificates=2023.05.30=hca03da5_0
+  - ca-certificates=2024.7.2=hca03da5_0
   - cctools=949.0.1=hc179dcd_25
   - cctools_osx-arm64=949.0.1=h332cad3_25
-  - certifi=2023.7.22=py311hca03da5_0
+  - certifi=2024.7.4=py311hca03da5_0
   - cffi=1.15.1=py311h80987f9_3
   - cfitsio=3.470=h7f6438f_7
   - chardet=4.0.0=py311hca03da5_1003
@@ -78,7 +78,7 @@ dependencies:
   - comm=0.1.2=py311hca03da5_0
   - conda=23.7.2=py311hca03da5_0
   - conda-build=3.26.0=py311hca03da5_0
-  - conda-content-trust=0.1.1=pyhd3eb1b0_0
+  - conda-content-trust=0.2.0=py311hca03da5_1
   - conda-index=0.2.3=py311hca03da5_0
   - conda-libmamba-solver=23.5.0=py311hca03da5_0
   - conda-pack=0.6.0=pyhd3eb1b0_0
@@ -111,6 +111,7 @@ dependencies:
   - entrypoints=0.4=py311hca03da5_0
   - et_xmlfile=1.1.0=py311hca03da5_0
   - executing=0.8.3=pyhd3eb1b0_0
+  - filelock=3.13.1=py311hca03da5_0
   - flake8=6.0.0=py311hca03da5_0
   - flask=2.2.2=py311hca03da5_0
   - fmt=9.1.0=h48ca7d4_0
@@ -280,11 +281,12 @@ dependencies:
   - nss=3.89.1=h313beb8_0
   - numba=0.57.0=py311h7aedaa7_0
   - numexpr=2.8.4=py311h6dc990b_1
+  - numpy-base=1.24.3=py311h1d85a46_0
   - numpydoc=1.5.0=py311hca03da5_0
   - oniguruma=6.9.7.1=h1a28f6b_0
   - openjpeg=2.3.0=h7a6adac_2
   - openpyxl=3.0.10=py311h80987f9_0
-  - openssl=1.1.1u=h1a28f6b_0
+  - openssl=1.1.1w=h1a28f6b_0
   - orc=1.7.4=hdca1487_1
   - packaging=23.0=py311hca03da5_0
   - pandocfilters=1.5.0=pyhd3eb1b0_0
@@ -336,8 +338,10 @@ dependencies:
   - pylint=2.16.2=py311hca03da5_0
   - pylint-venv=2.3.0=py311hca03da5_0
   - pyls-spyder=0.4.0=pyhd3eb1b0_0
+  - pyobjc-core=10.1=py311h80987f9_0
+  - pyobjc-framework-cocoa=10.1=py311hb094c41_0
   - pyobjc-framework-coreservices=9.0=py311hdd8dd1f_0
-  - pyobjc-framework-fsevents=9.0=py311hca03da5_0
+  - pyobjc-framework-fsevents=10.1=py311hca03da5_0
   - pyodbc=4.0.34=py311h313beb8_0
   - pyopenssl=23.2.0=py311hca03da5_0
   - pyparsing=3.0.9=py311hca03da5_0
@@ -359,6 +363,7 @@ dependencies:
   - python-lsp-server=1.7.2=py311hca03da5_0
   - python-slugify=5.0.2=pyhd3eb1b0_0
   - python-snappy=0.6.1=py311h313beb8_0
+  - python-tzdata=2023.3=pyhd3eb1b0_0
   - python-xxhash=2.0.2=py311h80987f9_1
   - python.app=3=py311h80987f9_0
   - pytoolconfig=1.2.5=py311hca03da5_1
@@ -407,6 +412,7 @@ dependencies:
   - sleef=3.5.1=h80987f9_2
   - smart_open=5.2.1=py311hca03da5_0
   - snappy=1.1.9=hc377ac9_0
+  - sniffio=1.3.0=py311hca03da5_0
   - snowballstemmer=2.2.0=pyhd3eb1b0_0
   - sortedcontainers=2.4.0=pyhd3eb1b0_0
   - soupsieve=2.4=py311hca03da5_0
@@ -448,6 +454,8 @@ dependencies:
   - traitlets=5.7.1=py311hca03da5_0
   - transformers=4.29.2=py311hca03da5_0
   - twisted=22.10.0=py311h80987f9_0
+  - typing_extensions=4.11.0=py311hca03da5_0
+  - tzdata=2023c=h04d1e81_0
   - uc-micro-py=1.0.1=py311hca03da5_0
   - ujson=5.4.0=py311h313beb8_0
   - unidecode=1.2.0=pyhd3eb1b0_0
@@ -501,7 +509,6 @@ dependencies:
       - email-validator==2.2.0
       - fastapi==0.111.0
       - fastapi-cli==0.0.4
-      - filelock==3.13.1
       - flatbuffers==23.5.26
       - gast==0.5.4
       - google-auth==2.27.0
@@ -535,8 +542,6 @@ dependencies:
       - pydantic-core==2.20.1
       - pygetwindow==0.0.9
       - pymsgbox==1.0.9
-      - pyobjc-core==10.1
-      - pyobjc-framework-cocoa==10.1
       - pyobjc-framework-quartz==10.1
       - pyperclip==1.8.2
       - pyrect==0.2.0
@@ -551,7 +556,6 @@ dependencies:
       - rubicon-objc==0.4.7
       - selenium==4.17.2
       - shellingham==1.5.4
-      - sniffio==1.3.0
       - sqlparse==0.4.4
       - starlette==0.37.2
       - tensorboard==2.15.1
@@ -565,7 +569,6 @@ dependencies:
       - trio-websocket==0.11.1
       - typer==0.12.3
       - typing-extensions==4.9.0
-      - tzdata==2023.3
       - uvicorn==0.30.1
       - uvloop==0.19.0
       - virtualenv==20.25.1
@@ -573,4 +576,3 @@ dependencies:
       - websockets==12.0
       - wsproto==1.2.0
       - xlsxwriter==3.1.9
-prefix: /Users/tongc/anaconda3
