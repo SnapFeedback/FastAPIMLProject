@@ -115,9 +115,6 @@ You can use the following Python script to test the API. Make sure to replace th
     testAPI();
 
 ## 2. Running the API Locally
-- **Install Anaconda**: 
-  - https://www.anaconda.com/download/success
-  
 - **Clone the Repository**:
 
     ```bash
@@ -145,5 +142,4 @@ For production deployment, it's recommended to use a production-ready server lik
     - https://fastapi.tiangolo.com/deployment/
 
 ## 4. Remarks
-- current version of application is developed and tested with anacoda3 env on MacOS Sonona 14.5
-- Window System is currently unavailable to Run the Build
+- current version of application is developed and tested with anacoda3 env on MacOS Sonona 14.5 
