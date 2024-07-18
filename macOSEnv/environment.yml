@@ -14,8 +14,6 @@ dependencies:
   - aiosqlite=0.18.0=py311hca03da5_0
   - alabaster=0.7.12=pyhd3eb1b0_0
   - anaconda-catalogs=0.2.0=py311hca03da5_0
-  - anaconda-client=1.12.0=py311hca03da5_0
-  - anaconda-navigator=2.4.2=py311hca03da5_0
   - anaconda-project=0.11.1=py311hca03da5_0
   - anyio=3.5.0=py311hca03da5_0
   - appdirs=1.4.4=pyhd3eb1b0_0
