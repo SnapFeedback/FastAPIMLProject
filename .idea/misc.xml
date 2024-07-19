@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="C:\Users\tongc\miniconda3" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="$USER_HOME$/anaconda3" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="FastAPIMLProject" project-jdk-type="Python SDK" />
 </project>
