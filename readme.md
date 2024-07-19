@@ -115,14 +115,16 @@ You can use the following Python script to test the API. Make sure to replace th
     testAPI();
 
 ## 2. Running the API Locally
+- **Install Anaconda3**
+  - Install Anaconda3 using official installer
+    - https://www.anaconda.com/download/success
 - **Clone the Repository**:
-
     ```bash
         git clone https://github.com/PatrickTongg/FastAPIMLProject.git
 - **Create a Conda Environment**:
     ```bash
         conda env create -f environment.yml
-        conda activate emotion-detection-env
+        conda activate project_env
 - **Start the API in development mode**:
 
     ```bash
@@ -142,4 +144,6 @@ For production deployment, it's recommended to use a production-ready server lik
     - https://fastapi.tiangolo.com/deployment/
 
 ## 4. Remarks
-- current version of application is developed and tested with anacoda3 env on MacOS Sonona 14.5 
+- current version of API is developed and tested with anacoda3 env on MacOS Sonona 14.5 
+- Window 11 is not available to run the current API
+- Linux compatibility is currently in test
