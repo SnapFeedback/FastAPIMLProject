@@ -126,6 +126,7 @@ You can use the following Python script to test the API. Make sure to replace th
         # for mac
         cd macOSEnv
         conda env create -f environment.yml
+        source /Users/william/anaconda3/etc/profile.d/conda.sh
         conda activate project_env
 - **Start the API in development mode**:
 
