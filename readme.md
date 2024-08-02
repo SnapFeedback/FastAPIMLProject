@@ -123,6 +123,8 @@ You can use the following Python script to test the API. Make sure to replace th
         git clone https://github.com/PatrickTongg/FastAPIMLProject.git
 - **Create a Conda Environment**:
     ```bash
+        # for mac
+        cd macOSEnv
         conda env create -f environment.yml
         conda activate project_env
 - **Start the API in development mode**:
